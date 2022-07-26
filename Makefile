@@ -12,3 +12,6 @@ publish: #отправка проекта на PyPl понарошку
 
 package-install: #Установка пакета из операционной системы
 	python3 -m pip install --user dist/*.whl
+
+lint: #Проверка кода линтером flake8
+	poetry run flake8 brain_games
