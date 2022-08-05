@@ -43,12 +43,12 @@ def access():
         else:
             print(f"""'{answer}' is wrong answer ;(. Correct answer was '{right_answer(riddle)}'.
 Let's try again, {name}!""")
-            access()
+            return access()
     print(f"Congratulations, {name}!")
 
-
-print('brain-even')
-welcome_user()
-instruction = 'Answer "yes" if the number is even, otherwise answer "no".'
-print(f'{instruction}')
-access()
+def even_start():
+    print('brain-even\n')
+    welcome_user()
+    instruction = 'Answer "yes" if the number is even, otherwise answer "no".'
+    print(f'{instruction}')
+    access()

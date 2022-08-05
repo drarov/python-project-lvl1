@@ -4,6 +4,9 @@ install: #Запуск poetry
 brain-games: #Запуск команды brain-games чисто по названию без доп команд
 	poetry run brain-games
 
+brain-even: #Запуск команды brain-even чисто по названию без доп команд
+	poetry run brain-even
+
 build: #активация poetry в проекте
 	poetry build
 
