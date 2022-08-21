@@ -7,6 +7,12 @@ brain-games: #Запуск команды brain-games чисто по назва
 brain-even: #Запуск команды brain-even чисто по названию без доп команд
 	poetry run brain-even
 
+brain-calc: #Запуск команды brain-calc чисто по названию без доп команд
+	poetry run brain-calc
+
+brain-gcd: #Запуск команды brain-gcd чисто по названию без доп команд
+	poetry run brain-gcd
+
 build: #активация poetry в проекте
 	poetry build
 
