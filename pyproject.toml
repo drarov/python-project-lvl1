@@ -10,6 +10,7 @@ packages = [
 [tool.poetry.dependencies]
 python = "^3.8"
 prompt = "^0.4.1"
+primePy = "^1.3"
 
 [tool.poetry.dev-dependencies]
 flake8 = "^4.0.1"
@@ -19,6 +20,8 @@ brain-games = "brain_games.scripts.brain_games:main"
 brain-even = "brain_games.scripts.brain_even:main"
 brain-calc = "brain_games.scripts.brain_calc:main"
 brain-gcd = "brain_games.scripts.brain_gcd:main"
+brain-progression = "brain_games.scripts.brain_progression:main"
+brain-prime = "brain_games.scripts.brain_prime:main"
 
 [build-system]
 requires = ["poetry-core>=1.0.0"]

@@ -1,10 +1,10 @@
 install: #Запуск poetry
 	poetry install
 
-brain-games: #Запуск команды brain-games чисто по названию без доп команд
+brain-games: #Запуск brain-games
 	poetry run brain-games
 
-brain-even: #Запуск команды brain-even чисто по названию без доп команд
+brain-even: #Запуск brain-even
 	poetry run brain-even
 
 brain-calc: #Запуск команды brain-calc чисто по названию без доп команд
@@ -12,6 +12,12 @@ brain-calc: #Запуск команды brain-calc чисто по назван
 
 brain-gcd: #Запуск команды brain-gcd чисто по названию без доп команд
 	poetry run brain-gcd
+
+brain-progression: #Запуск команды brain-progression чисто по названию без доп команд
+	poetry run brain-progression
+
+brain-prime: #Запуск команды brain-prime чисто по названию без доп команд
+	poetry run brain-prime
 
 build: #активация poetry в проекте
 	poetry build

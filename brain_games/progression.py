@@ -1,0 +1,51 @@
+import random
+
+def welcome_user():
+    print("Welcome to the Brain Games!")
+    name = ''
+    while name == '':
+        print('May I have your name? ', end='')
+        name = input()
+    return name
+
+
+def answer_yes_no():
+    answer = ''
+    while answer == '':
+        print('Your answer: ', end='')
+        answer = input()
+    return answer
+
+
+def access(name):
+    for i in range(3):
+        x = random.randint(1, 10)
+        y = random.randint(1, 10)
+        list1 = []
+        for n in range(x, x + y * 10, y):
+            list1.append(n)
+        z = random.randint(0, len(list1) - 1)
+        right_answer = str(list1[z])
+        list1.pop(z)
+        list1.insert(z, '..')
+        quiz = ''
+        for el in list1:
+            quiz += str(f'{el} ')
+        print(f"Question: {quiz}")
+        answer = answer_yes_no()
+        if right_answer == answer:
+            print('Correct!')
+        else:
+            print(f"""'{answer}' is wrong answer ;(. Correct answer was '{right_answer}'.
+Let's try again, {name}!""")
+            return access(name)
+    print(f"Congratulations, {name}!")
+
+
+def start():
+    print('brain-progression\n')
+    name = welcome_user()
+    print(f'Hello, {name}!')
+    instruction = 'What number is missing in the progression?'
+    print(f'{instruction}')
+    access(name)
