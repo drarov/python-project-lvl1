@@ -1,14 +1,11 @@
 from random import randint
+import prompt
+import sys
 
 
 def welcome_user():
     print("Welcome to the Brain Games!")
-    global name
-    name = ''
-    while name == '':
-        print('May I have your name? ', end='')
-        name = input()
-    print(f'Hello, {name}!')
+    return prompt.string('May I have your name? ')
 
 
 def random_number():
@@ -16,12 +13,7 @@ def random_number():
 
 
 def answer_yes_no():
-
-    answer = ''
-    while answer == '':
-        print('Your answer: ', end='')
-        answer = input()
-    return answer
+    return prompt.string('Your answer: ')
 
 
 def right_answer(guess):
@@ -31,24 +23,24 @@ def right_answer(guess):
         return 'no'
 
 
-def access():
-    x = 1
-    while x <= 3:
+def access(name):
+    for i in range(3):
         riddle = random_number()
         print(f'Question: {riddle}')
         answer = answer_yes_no()
         if right_answer(riddle) == answer:
             print('Correct!')
-            x += 1
         else:
             print(f"""'{answer}' is wrong answer ;(. Correct answer was '{right_answer(riddle)}'.
 Let's try again, {name}!""")
-            return access()
+            return sys.exit
     print(f"Congratulations, {name}!")
+
 
 def even_start():
     print('brain-even\n')
-    welcome_user()
+    name = welcome_user()
+    print(f'Hello, {name}!')
     instruction = 'Answer "yes" if the number is even, otherwise answer "no".'
     print(f'{instruction}')
-    access()
+    access(name)
