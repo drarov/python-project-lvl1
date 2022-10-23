@@ -47,7 +47,7 @@ def access(name):
     for i in range(3):
         x = random.randint(1, 100)
         y = random.randint(1, 100)
-        print(f'Question: {x}, {y}')
+        print(f'Question: {x} {y}')
         answer = answer_yes_no()
         if right_answer(x, y) == answer:
             print('Correct!')
@@ -66,3 +66,4 @@ def start():
     print(f'{instruction}')
     access(name)
 
+start()
