@@ -65,5 +65,3 @@ def start():
     instruction = 'Find the greatest common divisor of given numbers.'
     print(f'{instruction}')
     access(name)
-
-start()
