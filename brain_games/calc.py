@@ -1,22 +1,14 @@
 import random
-
+import prompt
+import sys
 
 def welcome_user():
     print("Welcome to the Brain Games!")
-    global name
-    name = ''
-    while name == '':
-        print('May I have your name? ', end='')
-        name = input()
-    print(f'Hello, {name}!')
+    return prompt.string('May I have your name? ')
 
 
 def answer_yes_no():
-    answer = ''
-    while answer == '':
-        print('Your answer: ', end='')
-        answer = input()
-    return answer
+    return prompt.string('Your answer: ')
 
 
 def right_answer(riddle, x, y):
@@ -34,7 +26,7 @@ def random_quiz():
     return random.choice(['add', 'mul', 'sub'])
 
 
-def access():
+def access(name):
     for i in range(3):
         x = random.randint(1, 10)
         y = random.randint(1, 10)
@@ -53,13 +45,14 @@ def access():
         else:
             print(f"""'{answer}' is wrong answer ;(. Correct answer was '{right_answer(riddle, x, y)}'.
 Let's try again, {name}!""")
-            return access()
+            return sys.exit
     print(f"Congratulations, {name}!")
 
 
 def start():
     print('brain-calc\n')
-    welcome_user()
+    name = welcome_user()
+    print(f'Hello, {name}!')
     instruction = 'What is the result of the expression?'
     print(f'{instruction}')
-    access()
+    access(name)

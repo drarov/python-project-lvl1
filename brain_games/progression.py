@@ -1,20 +1,14 @@
 import random
+import prompt
+import sys
 
 def welcome_user():
     print("Welcome to the Brain Games!")
-    name = ''
-    while name == '':
-        print('May I have your name? ', end='')
-        name = input()
-    return name
+    return prompt.string('May I have your name? ')
 
 
 def answer_yes_no():
-    answer = ''
-    while answer == '':
-        print('Your answer: ', end='')
-        answer = input()
-    return answer
+    return prompt.string('Your answer: ')
 
 
 def access(name):
@@ -38,8 +32,8 @@ def access(name):
         else:
             print(f"""'{answer}' is wrong answer ;(. Correct answer was '{right_answer}'.
 Let's try again, {name}!""")
-            return access(name)
-    print(f"Congratulations, {name}!")
+            return sys.exit
+        print(f"Congratulations, {name}!")
 
 
 def start():

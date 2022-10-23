@@ -1,7 +1,7 @@
 import random
 import prompt
 from primePy import primes
-
+import sys
 
 def welcome_user():
     print("Welcome to the Brain Games!")
@@ -29,7 +29,7 @@ def access(name):
         else:
             print(f"""'{answer}' is wrong answer ;(. Correct answer was '{right_answer(quiz)}'.
 Let's try again, {name}!""")
-            return access(name)
+            return sys.exit
     print(f"Congratulations, {name}!")
 
 
