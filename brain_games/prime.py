@@ -14,7 +14,7 @@ def answer_yes_no():
 
 
 def right_answer(quiz):
-    if primes.check(quiz):
+    if primes.check(quiz) == True and quiz > 1:
         return 'yes'
     else:
         return 'no'
