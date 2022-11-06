@@ -14,7 +14,7 @@ def answer_yes_no():
 
 
 def right_answer(quiz):
-    if primes.check(quiz) == True and quiz > 1:
+    if primes.check(quiz) is True and quiz > 1:
         return 'yes'
     else:
         return 'no'
@@ -28,8 +28,8 @@ def access(name):
         if right_answer(quiz) == answer:
             print('Correct!')
         else:
-            print(f"""'{answer}' is wrong answer ;(. Correct answer was '{right_answer(quiz)}'.
-Let's try again, {name}!""")
+            print(f"'{answer}' is wrong answer ;(. Correct answer was '{right_answer(quiz)}'.")
+            print(f"Let's try again, {name}!")
             return sys.exit
     print(f"Congratulations, {name}!")
 
@@ -38,6 +38,5 @@ def start():
     print('brain-prime\n')
     name = welcome_user()
     print(f'Hello, {name}!')
-    instruction = 'Answer "yes" if given number is prime. Otherwise answer "no".'
-    print(f'{instruction}')
+    print('Answer "yes" if given number is prime. Otherwise answer "no".')
     access(name)

@@ -44,8 +44,9 @@ def access(name):
         if right_answer(riddle, x, y) == answer:
             print('Correct!')
         else:
-            print(f"""'{answer}' is wrong answer ;(. Correct answer was '{right_answer(riddle, x, y)}'.
-Let's try again, {name}!""")
+            print(f"'{answer}' is wrong answer ;(."
+                  f" Correct answer was '{right_answer(riddle, x, y)}'.\n"
+                  f"Let's try again, {name}!")
             return sys.exit
     print(f"Congratulations, {name}!")
 

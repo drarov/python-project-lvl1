@@ -33,6 +33,7 @@ def comparison2(num2):
                 div_list2.append(n)
     return div_list2
 
+
 def right_answer(num1, num2):
     list1 = comparison1(num1)
     list2 = comparison2(num2)
@@ -53,8 +54,9 @@ def access(name):
         if right_answer(x, y) == answer:
             print('Correct!')
         else:
-            print(f"""'{answer}' is wrong answer ;(. Correct answer was '{right_answer(x, y)}'.
-Let's try again, {name}!""")
+            print(f"'{answer}' is wrong answer ;(.\n"
+                  f" Correct answer was '{right_answer(x, y)}'.")
+            print(f"Let's try again, {name}!")
             return sys.exit
     print(f"Congratulations, {name}!")
 
