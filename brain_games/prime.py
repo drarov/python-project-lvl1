@@ -28,7 +28,8 @@ def access(name):
         if right_answer(quiz) == answer:
             print('Correct!')
         else:
-            print(f"'{answer}' is wrong answer ;(. Correct answer was '{right_answer(quiz)}'.")
+            print(f"'{answer}' is wrong answer ;(.\n"
+                  f" Correct answer was '{right_answer(quiz)}'.")
             print(f"Let's try again, {name}!")
             return sys.exit
     print(f"Congratulations, {name}!")
