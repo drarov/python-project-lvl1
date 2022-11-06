@@ -1,32 +1,32 @@
-install: #Запуск poetry
+install: #Start poetry
 	poetry install
 
-brain-games: #Запуск brain-games
+brain-games: #Start brain-games
 	poetry run brain-games
 
-brain-even: #Запуск brain-even
+brain-even: #Start brain-even
 	poetry run brain-even
 
-brain-calc: #Запуск команды brain-calc чисто по названию без доп команд
+brain-calc: #Start brain-calc
 	poetry run brain-calc
 
-brain-gcd: #Запуск команды brain-gcd чисто по названию без доп команд
+brain-gcd: #Start brain-gcd
 	poetry run brain-gcd
 
-brain-progression: #Запуск команды brain-progression чисто по названию без доп команд
+brain-progression: #Start brain-progression
 	poetry run brain-progression
 
-brain-prime: #Запуск команды brain-prime чисто по названию без доп команд
+brain-prime: #Start brain-prime
 	poetry run brain-prime
 
-build: #активация poetry в проекте
+build: #Activate poetry inside of the project
 	poetry build
 
-publish: #отправка проекта на PyPl понарошку
+publish: #Sending the project to PyPl in dry mode
 	poetry publish --dry-run
 
-package-install: #Установка пакета из операционной системы
+package-install: #Install the program from a OS
 	python3 -m pip install --user dist/*.whl
 
-lint: #Проверка кода линтером flake8
+lint: #Checking the code with flake8
 	poetry run flake8 brain_games
